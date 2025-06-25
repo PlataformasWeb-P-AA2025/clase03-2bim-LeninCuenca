@@ -1,0 +1,13 @@
+<h2>Listado de Paises</h2>
+<h3>Número de Paises {{ numero_paises }}</h3>
+{% for p in paises %}
+    {{ p }}<br/>
+    <ul>
+        {% for e in p.estudiante_set.all %}
+            <li>
+                Estudiante {{ e }}<br/>
+            </li>
+        {% endfor %}
+    </ul>
+    <br/>
+{% endfor %}
